@@ -2,13 +2,7 @@
 
 public class Destroy : MonoBehaviour
 {
-    private GameObject player;
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");//referencia ao nosso player
-        
-    }
-
+    public GameObject player;
     void Update()
     {
         /*Verificação se o PLayer ja passou pelos obstaculos se sim destrui-los*/
