@@ -14,7 +14,7 @@ public class Score : MonoBehaviour
         //PlayerPrefs.DeleteAll(); //apaga os valores guardados neste caso o highscore.
         highscore = PlayerPrefs.GetInt("Highscore"); //Definimos o highscore com o valor que esta guardado
     }
-    void Update()
+    private void Update()
     {
         scoreUI.GetComponent<TextMeshProUGUI>().text = score.ToString();
         HighscoreUI.GetComponent<TextMeshProUGUI>().text = highscore.ToString();

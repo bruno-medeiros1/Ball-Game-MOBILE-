@@ -19,9 +19,9 @@ public class Coins : MonoBehaviour
 
     void Update()
     {
-        TotalCoinstxt.GetComponent<Text>().text = "x " + TotalCoins;
+        TotalCoinstxt.GetComponent<Text>().text = TotalCoins + "x";
         PlayerPrefs.SetInt("COINS", TotalCoins);
-        CoinsWonTxt.GetComponent<Text>().text = "Won: " + CoinsWon;        
+        CoinsWonTxt.GetComponent<Text>().text = "Ganho: " + CoinsWon;        
     }
     private void OnTriggerEnter(Collider other)
     {

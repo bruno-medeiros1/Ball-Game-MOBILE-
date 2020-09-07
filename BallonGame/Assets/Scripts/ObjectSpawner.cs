@@ -10,12 +10,9 @@ public class ObjectSpawner : MonoBehaviour
     private Vector3 SpawnObs_Position;//guarda a posicao de cada prefab da lista trianglePrefabs (0,0,0)
     private Vector3 SpawnCoin_Pos;//Guarda a posicao do prefab Coin (inicial = (0,0,0))
     private Vector3 SpawnJump_Pos;
-    private GameObject player;
+    public GameObject player;
 
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");//referencia ao nosso player
-    }
+    
     // Update is called once per frame
     void Update()
     {

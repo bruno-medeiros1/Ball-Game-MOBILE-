@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     public float DirrectionalSpeed;
     public float SpeedModifier;
     public float JumpSpeed;
-    private Rigidbody r;
 
+    private Rigidbody r;
     private Touch touch;
 
     public bool CanJump;
@@ -29,8 +29,27 @@ public class Player : MonoBehaviour
         nao queremos que saia da tela do telemovel portanto definimos umas booundaries com o mathf.Clamp*/
         transform.position = Vector3.Lerp(gameObject.transform.position, new Vector3(Mathf.Clamp(gameObject.transform.position.x + moveHorizontal, -2.5f, 2.5f), 
             gameObject.transform.position.y, gameObject.transform.position.z), Time.deltaTime * DirrectionalSpeed);
+
+        if (FindObjectOfType<JumpBoost>().jumpboost > 0)
+        {
+            CanJump = true;
+            if (Input.GetKeyDown("space"))
+            {
+                // Debug.Log("SALTO");
+                Vector3 atas = new Vector3(0, 1, 0);
+                r.AddForce(atas * JumpSpeed * Time.deltaTime, ForceMode.Impulse);
+                FindObjectOfType<AudioManager>().Play("Jump");
+                FindObjectOfType<JumpBoost>().jumpboost--;
+                if (FindObjectOfType<JumpBoost>().jumpboost <= 0)
+                {
+                    CanJump = false;
+                }
+            }
+        }
+        else
+        { CanJump = false; }
 #endif
-        
+
         /*MOBILE CONTROLLERS CODE*/
         if (Input.touchCount > 0 && PlayerMovement == true)//se estiver a tocar no ecra
         {
@@ -62,29 +81,10 @@ public class Player : MonoBehaviour
 
         }
 
-        MaxSpeed += 0.002f;//aumentando a velocidade
+        MaxSpeed += 0.003f;//aumentando a velocidade
         r.AddForce(0, 0, 1000 * Time.deltaTime);//força que impulsiona o player para a frente
         
         gameObject.transform.Rotate(Vector3.right * r.velocity.z / 3);//Rotação do objecto Player
-
-        if (FindObjectOfType<JumpBoost>().jumpboost > 0)
-        {
-            CanJump = true;
-            if (Input.GetKeyDown("space") )
-            {
-               // Debug.Log("SALTO");
-                Vector3 atas = new Vector3(0, 1, 0);
-                r.AddForce(atas * JumpSpeed * Time.deltaTime, ForceMode.Impulse);
-                FindObjectOfType<AudioManager>().Play("Jump");
-                FindObjectOfType<JumpBoost>().jumpboost--;
-                if (FindObjectOfType<JumpBoost>().jumpboost <= 0)
-                {
-                    CanJump = false;
-                }
-            }
-        }
-        else
-        { CanJump = false; }
         
     }
     private void FixedUpdate()
@@ -115,24 +115,11 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
 
         }
-        if (other.gameObject.CompareTag("MissCoin")) 
-        {
-            //Debug.Log("miss coin");
-            Destroy(other.transform.parent.gameObject);
-        }
-        if (other.gameObject.CompareTag("JumpPowerUP")) 
+        if (other.gameObject.CompareTag("JumpPowerUP"))
         {
             FindObjectOfType<AudioManager>().Play("PowerUp");
             CanJump = true;
-            
-
         }
-        if (other.gameObject.CompareTag("MissPowerUP")) 
-        {
-            Debug.Log("MISS POWERUP");
-            Destroy(other.transform.parent.gameObject);
-        }
-        
     }
 
 }

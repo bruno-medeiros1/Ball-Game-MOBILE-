@@ -9,7 +9,7 @@ public class ShopManager : MonoBehaviour
     public GameObject player;
     public GameObject BuyTrailUI;
 
-    private int HasTrail =0;
+    private int HasTrail = 0;
 
     private void Start()
     {
@@ -22,8 +22,7 @@ public class ShopManager : MonoBehaviour
     }
     private void Update()
     {
-        FindObjectOfType<AppInicialize>().CoinsShop.GetComponent<Text>().text = "* " + FindObjectOfType<Coins>().TotalCoins;
-        
+        FindObjectOfType<AppInicialize>().CoinsShop.GetComponent<Text>().text =  FindObjectOfType<Coins>().TotalCoins + "x";   
     }
     public void BuyJump1() 
    {
