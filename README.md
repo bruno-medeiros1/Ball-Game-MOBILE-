@@ -13,4 +13,3 @@ Features in it:
 - Object Spawning for Triangles, Coins and Jump Boosters Prefabs;
 - Trail Effects when unlocked in shop;
 
-If you want to check the game scripts you can :)
