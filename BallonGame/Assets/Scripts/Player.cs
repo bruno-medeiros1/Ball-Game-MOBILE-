@@ -50,6 +50,9 @@ public class Player : MonoBehaviour
         { CanJump = false; }
 
 #endif
+        MaxSpeed += 0.003f;//aumentando a velocidade
+        r.AddForce(0, 0, 1000 * Time.deltaTime);//força que impulsiona o player para a frente 
+        gameObject.transform.Rotate(Vector3.right * r.velocity.z / 3);//Rotação do objecto Player    
 
         /*MOBILE CONTROLLERS CODE*/
         if (Input.touchCount > 0 && PlayerMovement == true)//se estiver a tocar no ecra
@@ -63,13 +66,8 @@ public class Player : MonoBehaviour
                 transform.position = new Vector3(Mathf.Clamp(gameObject.transform.position.x + touch.deltaPosition.x * SpeedModifier, -2.5f, 2.5f), 
                     transform.position.y, transform.position.z);//movimentamos o jogador para a posicao pretendida
             }
-            if (touch.phase == TouchPhase.Ended)
-            {
-                //Debug.Log("DEDO tirado da tela");
-            }
             if (touch.phase == TouchPhase.Began && CanJump == true && FindObjectOfType<JumpBoost>().jumpboost > 0)
             {
-                //Debug.Log("Salto");
                 Vector3 atas = new Vector3(0, 1, 0);
                 r.AddForce(atas * JumpSpeed * Time.deltaTime, ForceMode.Impulse);
                 FindObjectOfType<JumpBoost>().jumpboost--;
@@ -79,11 +77,7 @@ public class Player : MonoBehaviour
                     CanJump = false;
                 }
             }
-
-        }
-        MaxSpeed += 0.003f;//aumentando a velocidade
-        r.AddForce(0, 0, 1000 * Time.deltaTime);//força que impulsiona o player para a frente 
-        gameObject.transform.Rotate(Vector3.right * r.velocity.z / 3);//Rotação do objecto Player     
+        } 
     }
     private void FixedUpdate()
     {
@@ -94,8 +88,7 @@ public class Player : MonoBehaviour
         }
     }
     private void OnTriggerEnter(Collider other)
-    {
-        
+    {   
         /*Se tocamos no triangle damos stop na musica Theme e GameOver*/
         if (other.gameObject.CompareTag("Triangle")) 
         {
@@ -107,13 +100,12 @@ public class Player : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("Coin");
             Destroy(other.gameObject);
-
         }
         if (other.gameObject.CompareTag("JumpPowerUP"))
         {
             FindObjectOfType<AudioManager>().Play("PowerUp");
+            Destroy(other.gameObject);
             CanJump = true;
         }
     }
-
 }
