@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &487262126430530412
+--- !u!1 &1686465875853328772
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 525468511256832546}
-  - component: {fileID: 381287325645335529}
-  - component: {fileID: 6044298880713882821}
-  - component: {fileID: 5776828610258518649}
+  - component: {fileID: 1652340878728429770}
+  - component: {fileID: 1508151002238812417}
+  - component: {fileID: 4775280546204292653}
+  - component: {fileID: 4724265660332320913}
   m_Layer: 0
   m_Name: JumpBoost
   m_TagString: JumpPowerUP
@@ -19,28 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &525468511256832546
+--- !u!4 &1652340878728429770
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487262126430530412}
+  m_GameObject: {fileID: 1686465875853328772}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8159073354371169860}
-  m_Father: {fileID: 6882415824171308396}
+  - {fileID: 6962077293096146092}
+  m_Father: {fileID: 5631713056643415940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &381287325645335529
+--- !u!212 &1508151002238812417
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487262126430530412}
+  m_GameObject: {fileID: 1686465875853328772}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,14 +85,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6044298880713882821
+--- !u!95 &4775280546204292653
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487262126430530412}
+  m_GameObject: {fileID: 1686465875853328772}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 191a0f079ed4b144bb21a291b17bbf07, type: 2}
@@ -104,20 +104,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &5776828610258518649
+--- !u!65 &4724265660332320913
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487262126430530412}
+  m_GameObject: {fileID: 1686465875853328772}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12, z: 0.20000003}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &8539401243494413068
+--- !u!1 &7432788463464323556
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,48 +125,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6882415824171308396}
-  - component: {fileID: -1466114394003633851}
+  - component: {fileID: 5631713056643415940}
+  - component: {fileID: 8792096486943450029}
   m_Layer: 0
-  m_Name: JumpPowerUP
-  m_TagString: Untagged
+  m_Name: JumpPowerUP 1
+  m_TagString: JumpPowerUP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6882415824171308396
+--- !u!4 &5631713056643415940
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8539401243494413068}
+  m_GameObject: {fileID: 7432788463464323556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.17, y: 0.2, z: 0.156}
   m_Children:
-  - {fileID: 525468511256832546}
+  - {fileID: 1652340878728429770}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1466114394003633851
+--- !u!114 &8792096486943450029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8539401243494413068}
+  m_GameObject: {fileID: 7432788463464323556}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: babcaf908f9b0694c92cc1a1ce7d53d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &8159073354371032260
+  player: {fileID: 919132149155446097, guid: 33c6c6eb471ac3545b538b72325b0b09, type: 3}
+--- !u!1001 &6962077293095751212
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 525468511256832546}
+    m_TransformParent: {fileID: 1652340878728429770}
     m_Modifications:
     - target: {fileID: 100000, guid: da3d18c3ad8d31945abc8592ac7d3693, type: 3}
       propertyPath: m_Name
@@ -230,8 +231,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da3d18c3ad8d31945abc8592ac7d3693, type: 3}
---- !u!4 &8159073354371169860 stripped
+--- !u!4 &6962077293096146092 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: da3d18c3ad8d31945abc8592ac7d3693, type: 3}
-  m_PrefabInstance: {fileID: 8159073354371032260}
+  m_PrefabInstance: {fileID: 6962077293095751212}
   m_PrefabAsset: {fileID: 0}

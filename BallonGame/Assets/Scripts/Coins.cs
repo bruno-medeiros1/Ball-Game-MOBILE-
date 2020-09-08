@@ -11,13 +11,13 @@ public class Coins : MonoBehaviour
     public Text TotalCoinstxt; //referencia à nossa UI que mostra o total de moedas
     public Text CoinsWonTxt;//referencia à nossa UI que mostra as moedas ganhas em cada tentativa
 
-    void Start()
+    private void Start()
     {
         /*LOAD DAS MOEDAS TOTAIS*/
         TotalCoins =  PlayerPrefs.GetInt("COINS");     
     }
 
-    void Update()
+    private void Update()
     {
         TotalCoinstxt.GetComponent<Text>().text = TotalCoins + "x";
         PlayerPrefs.SetInt("COINS", TotalCoins);

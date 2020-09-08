@@ -13,16 +13,13 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<AppInicialize>().CoinsShop.GetComponent<Text>().text = FindObjectOfType<Coins>().TotalCoins + "x";
         /*Se for um significa que já tinha comprado entao estara sempre ativo*/
-        if((HasTrail = PlayerPrefs.GetInt("num")) == 1)
+        if ((HasTrail = PlayerPrefs.GetInt("num")) == 1)
         {
             player.GetComponent<TrailRenderer>().enabled = true;
             BuyTrailUI.SetActive(false);
         }
-    }
-    private void Update()
-    {
-        FindObjectOfType<AppInicialize>().CoinsShop.GetComponent<Text>().text =  FindObjectOfType<Coins>().TotalCoins + "x";   
     }
     public void BuyJump1() 
    {
@@ -40,7 +37,8 @@ public class ShopManager : MonoBehaviour
             NoMoney.gameObject.SetActive(true);
             StartCoroutine(FadeText(NoMoney));
         }
-   }
+        FindObjectOfType<AppInicialize>().CoinsShop.GetComponent<Text>().text = FindObjectOfType<Coins>().TotalCoins + "x";
+    }
     public void BuyJump2()
     {
         if (FindObjectOfType<Coins>().TotalCoins >= 250)
@@ -57,6 +55,7 @@ public class ShopManager : MonoBehaviour
             NoMoney.gameObject.SetActive(true);
             StartCoroutine(FadeText(NoMoney));
         }
+        FindObjectOfType<AppInicialize>().CoinsShop.GetComponent<Text>().text = FindObjectOfType<Coins>().TotalCoins + "x";
     }
     public void BuyJump3()
     {
@@ -74,6 +73,7 @@ public class ShopManager : MonoBehaviour
             NoMoney.gameObject.SetActive(true);
             StartCoroutine(FadeText(NoMoney));
         }
+        FindObjectOfType<AppInicialize>().CoinsShop.GetComponent<Text>().text = FindObjectOfType<Coins>().TotalCoins.ToString() + "x";
     }
     public void BuyTrail() 
     {
@@ -93,6 +93,7 @@ public class ShopManager : MonoBehaviour
             NoMoney.gameObject.SetActive(true);
             StartCoroutine(FadeText(NoMoney));
         }
+        FindObjectOfType<AppInicialize>().CoinsShop.GetComponent<Text>().text = FindObjectOfType<Coins>().TotalCoins + "x";
     }
     IEnumerator FadeText(Text _txt) 
     {

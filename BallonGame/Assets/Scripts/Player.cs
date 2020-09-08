@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
         }
         else
         { CanJump = false; }
+
 #endif
 
         /*MOBILE CONTROLLERS CODE*/
@@ -80,12 +81,9 @@ public class Player : MonoBehaviour
             }
 
         }
-
         MaxSpeed += 0.003f;//aumentando a velocidade
-        r.AddForce(0, 0, 1000 * Time.deltaTime);//força que impulsiona o player para a frente
-        
-        gameObject.transform.Rotate(Vector3.right * r.velocity.z / 3);//Rotação do objecto Player
-        
+        r.AddForce(0, 0, 1000 * Time.deltaTime);//força que impulsiona o player para a frente 
+        gameObject.transform.Rotate(Vector3.right * r.velocity.z / 3);//Rotação do objecto Player     
     }
     private void FixedUpdate()
     {
@@ -97,11 +95,7 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        /*Se colidir com o Score damos play na musica respetiva*/
-        if (other.gameObject.CompareTag("Score"))
-        {
-            FindObjectOfType<AudioManager>().Play("Score");
-        }
+        
         /*Se tocamos no triangle damos stop na musica Theme e GameOver*/
         if (other.gameObject.CompareTag("Triangle")) 
         {

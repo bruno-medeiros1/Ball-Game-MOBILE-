@@ -151,8 +151,7 @@ public class AppInicialize : MonoBehaviour, IUnityAdsListener
         {
             Player.GetComponent<SphereCollider>().enabled = false;
             StartCoroutine(StartGame(1.0f));            
-            StartCoroutine("NoGod");
-            
+            StartCoroutine("NoGod");      
         }
         /*Caso estejam a iniciar do 0 queremos que seja emediato*/
         else

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public int score = 0;
+    public int score;
     public int highscore;
     public TextMeshProUGUI scoreUI;//referencia ao nosso texto UI
     public TextMeshProUGUI HighscoreUI;
