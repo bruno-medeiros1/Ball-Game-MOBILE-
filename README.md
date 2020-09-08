@@ -13,4 +13,3 @@ Features in it:
 - Object Spawning for Triangles, Coins and Jump Boosters Prefabs;
 - Trail Effects when unlocked in shop;
 
-To play this Game in your phone just download the apk for anyone who wants to see the scripts you can check it too. ;)
