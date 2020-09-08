@@ -7,15 +7,16 @@ using UnityEngine.UI;
 public class AppInicialize : MonoBehaviour, IUnityAdsListener
 {
     /*Referencias UI para colocarmos nos Menus*/
-    public GameObject InMenuUI;
-    public GameObject InGameUI;
-    public GameObject GameOverUI;
-    public GameObject InPauseUI;    
-    public GameObject AdButtonUI;
-    public GameObject RestartButtonUi;
-    public GameObject SettingsUI;
-    public GameObject ShopUI;
-    public GameObject InfoUI;
+   
+    [HideInInspector] public GameObject InMenuUI;
+    [HideInInspector] public GameObject InGameUI;
+    [HideInInspector] public GameObject GameOverUI;
+    [HideInInspector] public GameObject InPauseUI;
+    [HideInInspector] public GameObject AdButtonUI;
+    [HideInInspector] public GameObject RestartButtonUi;
+    [HideInInspector] public GameObject SettingsUI;
+    [HideInInspector] public GameObject ShopUI;
+    [HideInInspector] public GameObject InfoUI;
 
     public GameObject Player;//referencia ao player
 

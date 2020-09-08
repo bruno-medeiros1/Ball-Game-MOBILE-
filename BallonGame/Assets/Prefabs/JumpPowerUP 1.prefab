@@ -161,7 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: babcaf908f9b0694c92cc1a1ce7d53d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 919132149155446097, guid: 33c6c6eb471ac3545b538b72325b0b09, type: 3}
 --- !u!1001 &6962077293095751212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -172,6 +171,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: da3d18c3ad8d31945abc8592ac7d3693, type: 3}
       propertyPath: m_Name
       value: Shine-2-Particles
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: da3d18c3ad8d31945abc8592ac7d3693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: da3d18c3ad8d31945abc8592ac7d3693, type: 3}
       propertyPath: m_LocalPosition.x

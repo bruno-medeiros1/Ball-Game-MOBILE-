@@ -18,7 +18,6 @@ public class Destroy : MonoBehaviour
                 FindObjectOfType<Score>().score++;
                 FindObjectOfType<AudioManager>().Play("Score");
             }
-            Debug.Log("PONTO");
             Destroy(gameObject);
         }
         
