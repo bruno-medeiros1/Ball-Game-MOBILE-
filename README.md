@@ -21,6 +21,5 @@ In the shop menu, you can buy items from collecting coins.
 - **`DONE`** Rail Effects when unlocked in the shop.
 
 
-
 ### ***Have fun! :stuck_out_tongue_winking_eye:*** 
 Thanks for reading! :smile:
